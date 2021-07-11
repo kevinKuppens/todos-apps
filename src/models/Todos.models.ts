@@ -9,3 +9,4 @@ export default class Todos{
     @Column()
     public description ?: string
     // @ManyToOne(() => UsersModel, (user) => user.todo )
+}
