@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from "typeorm";
 
 @Entity()
 export default class Todos{
@@ -6,4 +6,6 @@ export default class Todos{
     public id!:number;
     @Column()
     public title !: string;
-}
+    @Column()
+    public description ?: string
+    // @ManyToOne(() => UsersModel, (user) => user.todo )
